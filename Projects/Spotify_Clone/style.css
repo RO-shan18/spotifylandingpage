@@ -1,0 +1,394 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root{
+  --a:0;
+}
+
+body {
+  background: black;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  gap: 6px;
+}
+
+/* left part */
+.left {
+  width: 20vw;
+  height: 100vh;
+}
+
+/* Right part */
+.right {
+  width: 80vw;
+  min-height: 100vh;
+  overflow: scroll;
+  position: relative;
+}
+
+/* Inside left - home section */
+.home {
+  margin: 9px 10px;
+  padding: 16px 19px;
+  background-color: #121212;
+  border-radius: 5px;
+}
+
+.home .cross {
+  display: none;
+}
+
+.home img {
+  filter: invert(1);
+}
+
+.home ul li {
+  width: 25px;
+  color: white;
+  list-style: none;
+  display: flex;
+  padding-top: 22px;
+  gap: 20px;
+  font-weight: bold;
+  font-size: 17px;
+  font-family: Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic ProN,
+    Meiryo, MS Gothic;
+}
+
+/* Inside Left - Library section */
+.heading {
+  margin-bottom: 18px;
+}
+.library {
+  margin: 9px 10px;
+  padding: 16px 19px;
+  background: #121212;
+  border-radius: 5px;
+  position: sticky;
+  height:70vh;
+}
+
+.library_lists {
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+.library_lists ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid white;
+  padding: 14px 8px;
+  margin: 14px 0px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+ul li .info {
+  padding: 0px 11px;
+  width: 200px;
+  font-family: Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic ProN,
+    Meiryo, MS Gothic;
+}
+
+ul li img {
+  filter: invert(1);
+}
+
+.lib {
+  filter: invert(1);
+  display: flex;
+  gap: 20px;
+  font-family: Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic ProN,
+    Meiryo, MS Gothic;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.lib img {
+  width: 25px;
+  max-height: 28px;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding-top: 15px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  font-family: Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic ProN,
+    Meiryo, MS Gothic;
+}
+
+/* Right part */
+
+.header {
+  background-color: #121212;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  margin: 8px 7px 7px 0px;
+  border-radius: 5px;
+  position: sticky;
+  top: 9px;
+}
+
+.header .images {
+  filter: invert(1);
+  width: 20px;
+  display: flex;
+}
+
+.header .hamburger {
+  display: none;
+}
+
+.header .buttons {
+  color: white;
+}
+
+.header .buttons ul {
+  display: flex;
+  gap: 25px;
+}
+
+.header .buttons ul li {
+  list-style: none;
+  font-family: Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic ProN,
+    Meiryo, MS Gothic;
+  font-weight: 500;
+}
+
+.header .buttons ul li:nth-child(2) {
+  background-color: white;
+  color: black;
+  padding: 0px 15px;
+  border-radius: 6px;
+}
+
+.artist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px;
+  overflow-y: scroll;
+  max-height: 80vh;
+}
+
+.artist .images img {
+  border-radius: 200px;
+  width: 150px;
+  height: 150px;
+}
+
+.artist .images #image1 {
+  background-color: green;
+  color: black;
+  border-radius: 50%; /* to make it circular */
+  width: 30px;
+  height: 30px;
+  line-height: 100px;
+  position: relative;
+  left: 140px;
+  opacity: var(--a);
+  border: 1px solid black;
+  transition: all .5s ease-in-out;
+}
+
+
+/* .artist .images #image1:hover{
+    cursor:pointer;
+    top:0;
+    opacity: 1;
+} */
+
+.artist .images:hover {
+  cursor: pointer;
+  --a:1;
+}
+
+.images p {
+  color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.playbar {
+  position: absolute;
+  bottom: 0px;
+  background-color: rgb(8, 14, 8);
+  width: 99%;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.playbar .songbuttons img {
+  filter: invert(1);
+  padding: 5px 12px;
+  font-weight: bolder;
+  margin-bottom: 8px;
+}
+
+.seekbar {
+  width: 99%;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 7px;
+  margin: 4px;
+  cursor: pointer;
+}
+
+.circle {
+  height: 10px;
+  width: 10px;
+  border-radius: 16px;
+  background: white;
+  position: relative;
+  bottom: 3px;
+  transition: left 0.2s;
+  cursor: pointer;
+}
+
+.songbuttons {
+  cursor: pointer;
+}
+
+.capsule {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6px 13px;
+}
+
+.songinfo,
+.songtime {
+  color: white;
+  font-family: Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic ProN,
+    Meiryo, MS Gothic;
+}
+
+.songtime{
+  padding-top:6px;
+}
+
+.songinfo {
+  width: 20%;
+}
+
+.volume img{
+  filter:invert(1);
+}
+
+.volume{
+  display: flex;
+  gap: 18px;
+}
+
+.contain{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media (max-width: 1400px) {
+  .left {
+    position: absolute;
+    z-index: 1;
+    background: black;
+    left: -114%;;
+    width: 300px;
+    transition: all 0.5s;
+  }
+
+  .right {
+    width: 100vw;
+  }
+
+  .header .hamburger {
+    display: block;
+  }
+
+  .header .images {
+    gap: 18px;
+  }
+
+  .home .cross {
+    display: block;
+    position: absolute;
+    right: 22px;
+    top: 22px;
+  }
+
+  .artist {
+    justify-content: center;
+    height: 64vh;
+  }
+
+  .capsule {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .songinfo {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .playbar{
+    left: 10px;
+  }
+
+  .playbar .songbuttons img {
+    margin-bottom:0px;
+  }
+
+  .songtime{
+    margin-bottom: 10px;
+    padding-left: 35px;
+  }
+
+  .seekbar{
+    width:95%;
+  }
+
+  .contain{
+    gap: 0px;
+  }
+
+  .volume{
+    padding-bottom: 10px;
+  }
+}
